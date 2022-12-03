@@ -1,0 +1,12 @@
+GKE- Cluster Management - Command Line
+Create cluster = gcloud container clusters create my-cluster --zone <zone-name> --node-locations <node name>
+
+Resize cluster = gcloud container clusters resize my-cluster --node-pool my-node-pool --num-nodes 10
+
+Autoscale cluster = gcloud container clusters update cluster-name --enable-autoscaling --min-nodes=1 --max-nodes=10
+
+Delete Cluster = gcloud container clusters delete my-cluster
+
+Adding Node Pool = gloud container node-pools create new-node-pool-name --cluster my-cluster
+
+list images = gcloud container images list.
