@@ -1,0 +1,14 @@
+List Pods/Service/ReplicaSets = kubectl get pods/services/replicasets.
+
+Create Deployment = kubectl apply -f deployment.yaml or kubectl create deployment.
+
+Create Service = kubectl expose deployment hello-world-rest-api --type=loadbalancer ==port=8080
+
+scale Deployment     = kubectl scale deployment hello-world --replicas 5
+
+Autoscale Deployment = kubectl autoscale deployment --max --min --cpu-percent
+
+Delete Deployment    = kubectl delete deployment hello-world
+update deployment    = kubectl apply -f deployment.yaml
+
+Rollback Deployment  = kubectl rollout undo deployment hello-world --to-revision=1
